@@ -29,15 +29,10 @@ export async function getUser() {
     }
 }
 
-// 658ee4bcae3b8e6e08e086f9
-// 658ee4bcae3b8e6e08e086fa
-// 6592a43568c2784febb361ce
-// 6592a43568c2784febb361cf
-
 export async function getUserDataFromExternalApi(senderId, receiverId) {
     try {
         const response = await fetch(
-            `http://149.56.68.156:6060/api/chats?senderId=${senderId}&receiverId=${receiverId}`
+            `{your server}`
         );
 
         if (!response.ok) {
@@ -56,7 +51,7 @@ export async function getUserDataFromExternalApi(senderId, receiverId) {
 export async function sendMessageToExternalAPi(receiverId, senderId, message) {
     try {
         const response = await fetch(
-            `http://149.56.68.156:6060/api/chats?senderId=${senderId}&receiverId=${receiverId}`,
+            `{your server}`,
             {
                 method: "POST",
                 headers: {
